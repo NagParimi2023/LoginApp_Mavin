@@ -1,0 +1,26 @@
+package com.LoginApp;
+
+import java.util.ResourceBundle;
+
+public class LoginProgram {
+    public int checkLogin(String un,String pwd) {
+    	ResourceBundle rb=ResourceBundle.getBundle("config");
+    	String user=rb.getString("username");
+    	String pass=rb.getString("password");
+    	
+    	if(un.equals(user)&&pwd.equals(pass))
+    	{
+    		return 1;
+    	}
+    	else
+    	{
+    		return 0;
+    	}
+    }	
+//    	public static void main(String[] args) {
+//    		LoginProgram l=new LoginProgram();
+//    		l.checkLogin("abc", "abc@123");
+//    	}
+
+}
+
